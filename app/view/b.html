@@ -1,0 +1,58 @@
+<body>
+    <div class="container">
+
+        <!-- Информация о текущей базе -->
+        <div class="base-info">
+            <h2>База: <span id="base-name">Боевая база</span></h2>
+            <p><strong>Владелец:</strong> <span id="base-owner">Роман</span></p>
+            <button class="btn btn-export" id="export-btn">Выгрузить правки</button>
+        </div>
+
+        <!-- Блок фильтра -->
+        <div class="filter-block">
+            <span class="filter-label">Фильтр:</span>
+            <select class="filter-select" id="author-filter">
+                <option value="all">Все</option>
+                <option value="Роман">Роман</option>
+                <option value="Илья">Илья</option>
+                <option value="Леонид">Леонид</option>
+            </select>
+            <button class="btn" id="apply-filter-btn">Отобрать</button>
+        </div>
+
+        <!-- Таблица правок -->
+        <h2>Правки</h2>
+        <div style="max-height: 600px; overflow-y: auto;">
+            <table class="changes-table">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Дата</th>
+                        <th>Автор</th>
+                        <th>Задача</th>
+                        <th>Описание</th>
+                        <th>Загрузить</th>
+                    </tr>
+                </thead>
+                <tbody id="changes-list">
+                    <!-- Строки будут добавлены через JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Модальное окно подтверждения загрузки -->
+        <div id="load-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Подтверждение загрузки правок</h3>
+                <p>Загрузить правки от <strong id="load-date">01.01.2023</strong> по задаче <strong id="load-task">TASK-123</strong>?</p>
+                <div class="modal-footer">
+                    <button class="btn" id="cancel-load-btn">Отмена</button>
+                    <button class="btn" id="confirm-load-btn">Загрузить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="js/base1c.js"></script> -->
+</body>
